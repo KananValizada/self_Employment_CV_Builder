@@ -1,0 +1,82 @@
+/* //nav  */
+
+.container{
+    margin: 0 50px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+}
+.navbar-menu li  {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 10px;
+}
+
+.navbar-menu li a{
+    text-decoration: none;
+    color: teal;
+    font-size: 20px;
+}
+
+/* CreateCV */
+
+.sectCreateCv{
+background-image: url("../img/CrtBck.webp");
+background-repeat: no-repeat;
+background-size: cover;
+padding: 50px 0;
+border-radius: 10px;
+}
+.createCV{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.createCV-title{
+    color: white;
+    font-weight: 700;
+    padding-bottom: 50px ;
+    font-size: 30px;
+}
+.createCV-desc{
+    width: 50%;
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.createCV-btn{
+    background-color: teal;
+    color: white;
+    width: 200px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: color, background 0.5s;
+    height: 50px;
+    outline: none;
+    margin-bottom: 75px;
+    cursor: pointer;
+}
+.createCV-btn:hover{
+    background-color: turquoise;
+    color: teal;
+}
+
+/* footer */
+
+.footer{
+    background-color: white;
+    padding: 20px 0 ;
+    color: black;
+    font-size: 20px;
+}

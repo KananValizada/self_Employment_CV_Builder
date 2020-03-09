@@ -1,0 +1,71 @@
+.templates{
+background-color: teal;
+}
+.temp{
+color: white;
+padding: 25px 0;
+}
+.temp-title{
+padding: 0 20px 20px 20px ;
+color: white;
+text-align: center;
+}
+.temp-cards{
+    display: flex;
+}
+.temp-cards-item{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+.temp-cards-item-img{
+    width: 200px;
+    height: 250px;
+
+}
+.temp-cards-item div{
+    position: relative;
+    align-items: center;
+}
+
+.temp-cards-item div::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: all 0.5s;
+    
+}
+.temp-cards-item div:hover::before{
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.temp-cards-item div:hover .temp-cards-item-btn{
+   opacity: 1;
+}
+.temp-cards-item-btn{
+    position: absolute;
+    border: none;
+    top: 40%;
+    left: 25%;
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity, 0.5s;
+}
+.temp-cards-item-btn:hover{
+    color: teal;
+    background-color: turquoise;
+}
+.temp-cards-item-name{
+ font-size: 20px;
+ font-weight: 500;
+}
