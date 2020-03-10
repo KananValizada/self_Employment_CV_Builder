@@ -1,0 +1,37 @@
+.CV{
+    display: flex;
+}
+.CV-side{
+    padding: 45px 30px;
+    background-color: #e0948ed1;
+}
+.CV-side-imgKeeper{
+    transform: rotate(45deg) translate(16px,-1px);
+    overflow: hidden;
+    height: 120px;
+    box-sizing: border-box;
+    border: 2px orange solid;
+    width: 120px;
+}
+.CV-side-img{
+    width: 156px;
+    transform: rotate(-45deg) translateY(-25px);
+}
+.CV-interests{
+    padding: 35px 0;
+}
+.CV-interests-title{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.CV-interests-item{
+    display: flex;
+    align-items: center;
+}
+ul {
+    list-style: none;
+}
+.CV-title{
+    color: #ffca6a;
+    border-bottom: 2px #ffca6a solid;
+}
