@@ -1,0 +1,107 @@
+.CV{
+    display: flex;
+}
+.CV-side{
+    padding: 45px 30px;
+    background-color: #e0948ed1;
+}
+.CV-side-imgKeeper{
+    transform: rotate(45deg) translate(16px,-1px);
+    overflow: hidden;
+    height: 120px;
+    box-sizing: border-box;
+    border: 2px orange solid;
+    width: 120px;
+}
+.CV-side-img{
+    width: 156px;
+    transform: rotate(-45deg) translateY(-25px);
+}
+.CV-interests{
+    padding: 50px 0;
+}
+.CV-interests-text{
+    font-size: 14px;
+}
+.CV-interests-title{
+    font-weight: 700;
+    margin-bottom: 5px;
+    
+}
+.CV-interests-item,.CV-contacts-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.CV-contacts-item span{
+    display: block;
+    width: 80%;
+}
+.CV-interests-item ul {
+    width: 80%;
+}
+.fas{
+    margin-right: 5px;
+    color: #ffca6a;
+}
+ul {
+    list-style: none;
+}
+.CV-title{
+    color: #ffca6a;
+    border-bottom: 2px #ffca6a solid;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+
+/* CV MAIN */
+
+.CV-main{
+    padding: 0 25px;
+    background-color: #f5f5f5;
+}
+.CV-main-header{
+    text-align: center;
+    padding: 20px 0;
+}
+.CV-main-header-name{
+    font-size: 36px;
+}
+.CV-main-header-profession{
+    font-size: 24px;
+}
+.CV-main-experience-item,.CV-main-education-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.CV-main-experience-item-text,.CV-main-education-item-text{
+    width:80%
+}
+
+.CV-main-skills-languages-title{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.CV-main-skills-languages div{
+    display: flex;
+}
+.CV-main-skills-language{
+    margin-right: 30px;
+}
+.skill-percentage{
+    height: 15px;
+    width: 100px;
+    border: 1px solid #ffca6a;
+    position: relative;
+}
+.skill-percentage h1 {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 20%;
+background-color:#ffca6a ;
+}
