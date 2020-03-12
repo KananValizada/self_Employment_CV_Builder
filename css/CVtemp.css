@@ -2,47 +2,50 @@
     display: flex;
 }
 .CV-side{
-    padding: 45px 30px;
+    padding: 5vw 4vw;
     background-color: #e0948ed1;
 }
 .CV-side-imgKeeper{
-    transform: rotate(45deg) translate(16px,-1px);
+    transform: rotate(45deg) translate(2vw,0vw);
     overflow: hidden;
-    height: 120px;
+    height: 14vw;
     box-sizing: border-box;
     border: 2px orange solid;
-    width: 120px;
+    width: 14vw;
 }
 .CV-side-img{
-    width: 156px;
-    transform: rotate(-45deg) translateY(-25px);
+    width: 19vw;
+    transform: rotate(-45deg) translateY(-4vw);
 }
+
 .CV-interests{
-    padding: 50px 0;
+    padding: 7vw 0;
 }
 .CV-interests-text{
-    font-size: 14px;
+    font-size: 1.5vw;
 }
 .CV-interests-title{
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 1vw;
+    font-size: 2vw;
     
 }
 .CV-interests-item,.CV-contacts-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
 }
 .CV-contacts-item span{
     display: block;
     width: 80%;
+    font-size: 1.5vw;
 }
 .CV-interests-item ul {
     width: 80%;
 }
-.fas{
-    margin-right: 5px;
+.fas,.fab{
+    font-size: 2.5vw;
     color: #ffca6a;
 }
 ul {
@@ -51,49 +54,64 @@ ul {
 .CV-title{
     color: #ffca6a;
     border-bottom: 2px #ffca6a solid;
-    margin-bottom: 15px;
-    margin-top: 30px;
+    margin-bottom: 3vw;
+    margin-top: 6vw;
+    font-size: 2.4vw;
 }
 
 
 /* CV MAIN */
 
 .CV-main{
-    padding: 0 25px;
+    padding: 0 3vw;
     background-color: #f5f5f5;
 }
 .CV-main-header{
     text-align: center;
-    padding: 20px 0;
+    padding: 3vw 0;
 }
 .CV-main-header-name{
-    font-size: 36px;
+    font-size: 6vw;
 }
 .CV-main-header-profession{
-    font-size: 24px;
+    font-size: 4vw;
 }
 .CV-main-experience-item,.CV-main-education-item{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .CV-main-experience-item-text,.CV-main-education-item-text{
     width:80%
+}
+.CV-main-experience-title,
+.CV-main-education-title,
+.CV-main-experience-item-date,
+.CV-main-education-item-date,
+.CV-main-skills-languages-title{
+    font-size: 2vw;
+}
+.CV-main-experience-text,
+.CV-main-education-text,
+.CV-main-skills-language{
+    font-size: 1.5vw;
+    margin-top: 1vw;
 }
 
 .CV-main-skills-languages-title{
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 1vw;
 }
 .CV-main-skills-languages div{
     display: flex;
 }
 .CV-main-skills-language{
-    margin-right: 30px;
+    margin-right: 4vw;
 }
 .skill-percentage{
-    height: 15px;
-    width: 100px;
+    height: 2vw;
+    width: 15vw;
     border: 1px solid #ffca6a;
     position: relative;
 }

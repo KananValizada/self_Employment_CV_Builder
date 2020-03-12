@@ -1,0 +1,21 @@
+.Cv-editor-keeper {
+    display: flex;
+    justify-content: space-between;
+}
+.Cv-editor{
+    padding: 25px 0;
+}
+.personal-info{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.personal-info input{
+    margin-bottom: 10px;
+    height: 25px;
+}
+.personal-info-btn{
+    width: 100px;
+    align-self:flex-end;
+    margin-top: 25px;
+}

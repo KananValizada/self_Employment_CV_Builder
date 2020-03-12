@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV yarat</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/CVedit.css">
     
 </head>
 <body>
@@ -12,19 +13,38 @@
         <div class="container navbar">
             <div class="navbar-logo" >
                 <a href="index.html"><img src="img/Logo.png" width="100"></a> 
-            </div class="navbar-logo">
+            </div>
             <ul class="navbar-menu">
                 <li><a href="templates.html">Hazır şablonlar</a></li>
                 <li><a href="#">Haqqımızda</a></li>
             </ul>
         </div>
         </div>
-        <iframe src="CVtemp.html" width="500" height="600px"></iframe>
-        <div class="footer">
+        <div class="Cv-editor">
+            <div class="container Cv-editor-keeper">
+             <div class="CV-edit">
+                 <label for="pict">Səkil Yüklə</label>
+                 <input  name="pict" type="file"/>
+                 <form class="personal-info" action="">
+                     <input id="person-name" type="text" name="name" placeholder="Ad" />
+                     <input type="text" name="surname" placeholder="Soyad" />
+                     <input type="text" name="city" placeholder="Yaşadiği Şəhər"/>
+                     <input type="number" name="mobile" placeholder="Mobil nömrə"/>
+                     <input type="number" name="phone" placeholder="Şəhər nömrəsi"/>
+                     <input type="email" name="mail" placeholder="Elektron ünvan"/>
+                     <input class="personal-info-btn" type="button" name="next" value="Next"/>
+                 </form>
+             </div>
+             <iframe src="CVtemp.html" width="600" height="650px"></iframe>
+            </div>  
+        </div>
+       
+        <div  class="footer">
             <div class="container">
                 <p class="footer-text">&copy; All rights are reserved Created by Kanan Valizada</p>
             </div>
             
         </div>
+        <script src="js/script.js"></script>
 </body>
 </html>
