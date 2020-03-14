@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV yarat</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/CVtemp.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/CVedit.css">
     
@@ -22,20 +25,129 @@
         </div>
         <div class="Cv-editor">
             <div class="container Cv-editor-keeper">
-             <div class="CV-edit">
-                 <label for="pict">Səkil Yüklə</label>
-                 <input  name="pict" type="file"/>
-                 <form class="personal-info" action="">
-                     <input id="person-name" type="text" name="name" placeholder="Ad" />
-                     <input type="text" name="surname" placeholder="Soyad" />
-                     <input type="text" name="city" placeholder="Yaşadiği Şəhər"/>
-                     <input type="number" name="mobile" placeholder="Mobil nömrə"/>
-                     <input type="number" name="phone" placeholder="Şəhər nömrəsi"/>
-                     <input type="email" name="mail" placeholder="Elektron ünvan"/>
-                     <input class="personal-info-btn" type="button" name="next" value="Next"/>
-                 </form>
-             </div>
-             <iframe src="CVtemp.html" width="600" height="650px"></iframe>
+                <div class="CV-edit-sections">
+                    <div id="CV-edit-personal" class="CV-edit-personal">
+                        <h3 class="CV-edit-title">Şəxsi məlumatlar</h3>
+                         <label for="pict">Səkil Yüklə</label>
+                         <input  id="edit-pict" name="pict" type="file"/>
+                         <form class="personal-info" action="">
+                             <input id="edit-name" type="text" name="name" placeholder="Ad,soyad" />
+                             <input id="edit-city" type="text" name="city" placeholder="Yaşadiği Şəhər"/>
+                             <input id="edit-mobile" type="number" name="mobile" placeholder="Mobil nömrə"/>
+                             <input id="edit-phone" type="number" name="phone" placeholder="Şəhər nömrəsi"/>
+                             <input id="edit-mail" type="email" name="mail" placeholder="Elektron ünvan"/>
+                             <input id="edit-btn" class="personal-info-btn" type="button" name="next" value="Next"/>
+                         </form>
+                     </div>
+                     <div id="CV-edit-interests" class="CV-edit-interests">
+                         <h3 class="CV-edit-title">Maraqlar</h3>
+                         <div class="interest-select">
+                             <label for="interest">Birini seçin</label>
+                             <select id="interest-select"  name="interest">
+                                 <option>Kitab oxumaq</option>
+                                 <option>Idmanla məşğul olmaq</option>
+                                 <option>Təhsil</option>
+                             </select>
+                         </div>
+                         <div  class="interest-desc" >
+                             <p>Maraq sahəni təsvir et</p>
+                             <textarea id="interest-desc" class="interest-desc-text"></textarea>
+                         </div>
+                         <button class="interest-btn-add">Əlavə et</button>
+                     </div>
+                    </div>
+             <div id="aba" class="CV">
+                <div class="CV-side">
+                    <div class="CV-side-imgKeeper">
+                        <img id="display-pict" class="CV-side-img" src="img/profil.png" alt="">
+                    </div>        
+                    <div class="CV-interests">
+                        <h3 class="CV-title">INTERESTS</h3>
+                        <div class="CV-interests-item">
+                            <i class="fas fa-bolt CV-interests-icon"></i>
+                            <ul>
+                                <li class="CV-interests-title">Running</li>
+                                <li class="CV-interests-text">Currently training for the half marathon</li>
+                            </ul>
+                        </div>
+                        <div class="CV-interests-item">
+                            <i class="fas fa-book"></i>
+                            <ul>
+                                <li class="CV-interests-title">Reading</li>
+                                <li class="CV-interests-text">Psychological triller</li>
+                            </ul>
+                        </div>
+                        <div class="CV-interests-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <ul>
+                                <li class="CV-interests-title">Learning</li>
+                                <li class="CV-interests-text">Always Eager for academic studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="CV-contacts">
+                        <h3 class="CV-title">CONTACT</h3>
+                        <div class="CV-contacts-items">
+                            <p  class="CV-contacts-item"><i class="fas fa-home"></i> <span id="display-city">Melburn</span></p>
+                            <p class="CV-contacts-item" ><i class="fas fa-phone"></i><span id="display-phone">0124556987</span> </p>
+                            <p class="CV-contacts-item" ><i class="fas fa-mobile-alt"></i> <span id="display-mobile">0558717031</span></p>
+                            <p class="CV-contacts-item" ><i class="fas fa-envelope"></i><span id="display-mail">kenan.veli@yahoo.com</span> </p>
+                        </div>
+                        <div class="CV-contacts-social">
+                            <p class="CV-contacts-item" ><i class="fab fa-linkedin"></i> <span>KananVali</span></p>
+                            <p class="CV-contacts-item"><i class="fab fa-twitter"></i> <span>@KananVali</span></p>
+                            <p class="CV-contacts-item" ><i class="fab fa-facebook-f"></i><span>/KananVali</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="CV-main">
+                    <div class="CV-main-header">
+                        <h2 id="CV-main-header-name" class="CV-main-header-name" >Kanan Valizada</h2>
+                        <p class="CV-main-header-profession">Programmer</p>
+                    </div>
+                    <div class="CV-main-items" >
+                        <div class="CV-main-experience">
+                            <h3 class="CV-title">EXPERIENCE</h3>
+                            <div class="CV-main-experience-item">
+                                <p class="CV-main-experience-item-date">
+                                    <span class="CV-main-experience-start">2012</span> - <span class="CV-main-experience-end">2016</span>
+                                </p>
+                                <div class="CV-main-experience-item-text">
+                                    <h4 class="CV-main-experience-title">Company A</h4>
+                                    <p class="CV-main-experience-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis accusamus quas dolore, ducimus animi veniam doloribus delectus adipisci quam blanditiis ea sit harum aliquam deleniti facere reiciendis quisquam ad nulla! 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CV-main-education">
+                            <h3 class="CV-title">EDUCATION</h3>
+                            <div class="CV-main-education-item">
+                                <p class="CV-main-education-item-date">
+                                    <span class="CV-main-education-start">2012</span> - <span class="CV-main-experience-end">2016</span>
+                                </p>
+                                <div class="CV-main-education-item-text">
+                                    <h4 class="CV-main-education-title">Stratagic branding</h4>
+                                    <p class="CV-main-education-text">University of Baku</p>
+                                    <p class="CV-main-education-text">learning strategy</p>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="CV-main-skills">
+                        <h3 class="CV-title">SKILLS</h3>
+                        <div class="CV-main-skills-languages">
+                            <h3 class="CV-main-skills-languages-title">Languages</h3>
+                            <div>
+                                <span  class="CV-main-skills-language">English</span>
+                            <div class="skill-percentage">
+                                <h1></h1>
+                            </div>
+                            </div>
+                            
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
             </div>  
         </div>
        

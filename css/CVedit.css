@@ -19,3 +19,34 @@
     align-self:flex-end;
     margin-top: 25px;
 }
+.CV-edit-title{
+    font-size: 26px;
+    padding: 20px 0;
+}
+.CV-edit-interests{
+    display: flex;
+    flex-direction: column;
+}
+.interest-select{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.interest-select select{
+    height: 30px;
+}
+.interest-desc p{
+font-size: 18px;
+margin-bottom: 15px;
+}
+.interest-desc textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.interest-btn-add{
+    align-self: flex-end;
+}
