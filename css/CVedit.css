@@ -25,6 +25,7 @@
 }
 .CV-edit-interests{
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
 }
 .interest-select{
@@ -36,7 +37,21 @@
 }
 
 .interest-select select{
+    margin-left: 15px;
     height: 30px;
+}
+.interest-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.interest-title input{
+    margin-left: 15px;
+    height: 20px;
+
 }
 .interest-desc p{
 font-size: 18px;
@@ -49,4 +64,7 @@ margin-bottom: 15px;
 }
 .interest-btn-add{
     align-self: flex-end;
+}
+.interest-btn-new,.interest-btn-next{
+    display: none;
 }

@@ -44,16 +44,23 @@
                          <div class="interest-select">
                              <label for="interest">Birini seçin</label>
                              <select id="interest-select"  name="interest">
+                                 <option disabled selected>Secin</option>
                                  <option>Kitab oxumaq</option>
                                  <option>Idmanla məşğul olmaq</option>
                                  <option>Təhsil</option>
                              </select>
+                         </div>
+                         <div class="interest-title">
+                             <label for="title">Baslıq əlavə edin</label>
+                             <input type="text" name="title">
                          </div>
                          <div  class="interest-desc" >
                              <p>Maraq sahəni təsvir et</p>
                              <textarea id="interest-desc" class="interest-desc-text"></textarea>
                          </div>
                          <button class="interest-btn-add">Əlavə et</button>
+                         <button class="interest-btn-new">Yeni maraq yarat</button>
+                         <button class="interest-btn-next">Davam et</button>
                      </div>
                     </div>
              <div id="aba" class="CV">
@@ -63,21 +70,21 @@
                     </div>        
                     <div class="CV-interests">
                         <h3 class="CV-title">INTERESTS</h3>
-                        <div class="CV-interests-item">
+                        <div id="sport" class="CV-interests-item">
                             <i class="fas fa-bolt CV-interests-icon"></i>
                             <ul>
                                 <li class="CV-interests-title">Running</li>
                                 <li class="CV-interests-text">Currently training for the half marathon</li>
                             </ul>
                         </div>
-                        <div class="CV-interests-item">
+                        <div id="bookRead" class="CV-interests-item">
                             <i class="fas fa-book"></i>
                             <ul>
                                 <li class="CV-interests-title">Reading</li>
                                 <li class="CV-interests-text">Psychological triller</li>
                             </ul>
                         </div>
-                        <div class="CV-interests-item">
+                        <div id="education" class="CV-interests-item">
                             <i class="fas fa-graduation-cap"></i>
                             <ul>
                                 <li class="CV-interests-title">Learning</li>

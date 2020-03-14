@@ -46,3 +46,61 @@ editPersonBtn.addEventListener("click",function(){
 CvPersonal.style.display="none";
 CvIntersts.style.display="flex";
 })
+
+// interest adding
+var interestEditSelect = document.getElementById("interest-select")
+var intersetSport =document.getElementById("sport")
+var intersetBook =document.getElementById("bookRead")
+var intersetEducate =document.getElementById("education")
+interestEditSelect.addEventListener("change",function(){
+if(interestEditSelect.value=="Idmanla məşğul olmaq"){
+    intersetSport.style.display="flex"
+    intersetBook.style.display = "none"
+    intersetEducate.style.display = "none"
+}else if(interestEditSelect.value=="Kitab oxumaq"){
+intersetBook.style.display = "flex"
+intersetSport.style.display="none"
+intersetEducate.style.display = "none"
+}else if(interestEditSelect.value=="Təhsil"){
+    intersetBook.style.display = "none"
+    intersetSport.style.display="none"
+    intersetEducate.style.display = "flex"
+}else{
+    intersetBook.style.display = "none"
+    intersetSport.style.display="none"
+    intersetEducate.style.display = "none"
+}
+})
+var intTitle = document.querySelector(".interest-title input")
+var intDispTitleBook = document.querySelector("#bookRead .CV-interests-title")
+var intDispTitleEducate = document.querySelector("#education .CV-interests-title")
+var intDispTitleSport = document.querySelector("#sport .CV-interests-title")
+intTitle.addEventListener("input",function(){
+if(intersetSport.style.display=="flex"){
+    intDispTitleSport.innerText= intTitle.value 
+}
+if(intersetBook.style.display=="flex"){
+    intDispTitleBook.innerText= intTitle.value 
+}
+if(intersetEducate.style.display=="flex"){
+    intDispTitleEducate.innerText= intTitle.value 
+}
+})
+
+var intEditDesc = document.getElementById("interest-desc")
+var intDispDescBook = document.querySelector("#bookRead .CV-interests-text")
+var intDispDescEducate = document.querySelector("#education .CV-interests-text")
+var intDispDescSport = document.querySelector("#sport .CV-interests-text")
+
+intEditDesc.addEventListener("input",function(){
+    if(intersetSport.style.display=="flex"){
+        intDispDescSport.innerText= intEditDesc.value 
+    }
+    if(intersetBook.style.display=="flex"){
+        intDispDescBook.innerText= intEditDesc.value 
+    }
+    if(intersetEducate.style.display=="flex"){
+        intDispDescEducate.innerText= intEditDesc.value 
+    }
+})
+
