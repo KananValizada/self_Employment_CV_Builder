@@ -10,8 +10,9 @@
     display: flex;
     flex-direction: column;
 }
-.personal-info input{
+.personal-info input,.personal-info label{
     margin-bottom: 10px;
+    
     height: 25px;
 }
 .personal-info-btn{
@@ -31,6 +32,10 @@
 .CV-edit-interests{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+.CV-edit-sections{
+    display: flex;
     flex-direction: column;
 }
 .interest-select{
@@ -79,7 +84,14 @@ margin-bottom: 15px;
     padding: 15px 25px ;
     background-color: teal;
     color: white;
-    margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 20px;
     cursor: pointer;
+}
+.CV-edit-experience{
+    display: none;
+}
+.CV-edit-experience textarea{
+margin-bottom: 20px;
+height: 50px;
 }

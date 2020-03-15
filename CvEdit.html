@@ -32,6 +32,7 @@
                          <input  id="edit-pict" name="pict" type="file"/>
                          <form class="personal-info" action="">
                              <input id="edit-name" type="text" name="name" placeholder="Ad,soyad" />
+                             <input id="edit-profess" type="text" name="prof" placeholder="İxtisas"/>
                              <input id="edit-city" type="text" name="city" placeholder="Yaşadiği Şəhər"/>
                              <input id="edit-mobile" type="number" name="mobile" placeholder="Mobil nömrə"/>
                              <input id="edit-phone" type="number" name="phone" placeholder="Şəhər nömrəsi"/>
@@ -62,14 +63,26 @@
                      </div>
                      <button class="interest-btn-new">Yeni maraq yarat</button>
                      <button class="interest-btn-next">Davam et</button>
-                    </div>
+                     <div class="CV-edit-experience">
+                        <h3 class="CV-edit-title">İş təcrübəsi</h3>
+                        <form class="personal-info" action="">
+                            <input id="edit-exp-name" type="text" name="workName" placeholder="İş yer"/>
+                            <textarea id="edit-exp-desc"  name="phone" placeholder="Görülən işlər"></textarea>
+                            <label for="startDate">Başlanğıc tarixi</label>
+                            <input id="edit-exp-startDate" type="date" name="startDate" />
+                            <label for="endDate">Bitmə tarixi</label>
+                            <input id="edit-exp-endDate"  type="date" name="endDate"/>
+                            <button>Əlavə et</button>
+                        </form>
+                     </div>
+                </div>
              <div id="aba" class="CV">
                 <div class="CV-side">
                     <div class="CV-side-imgKeeper">
                         <img id="display-pict" class="CV-side-img" src="img/profil.png" alt="">
                     </div>        
                     <div class="CV-interests">
-                        <h3 class="CV-title">INTERESTS</h3>
+                        <h3 class="CV-title title-interest">INTERESTS</h3>
                         <div id="sport" class="CV-interests-item">
                             <i class="fas fa-bolt CV-interests-icon"></i>
                             <ul>
@@ -110,7 +123,7 @@
                 <div class="CV-main">
                     <div class="CV-main-header">
                         <h2 id="CV-main-header-name" class="CV-main-header-name" >Kanan Valizada</h2>
-                        <p class="CV-main-header-profession">Programmer</p>
+                        <p id="CV-main-header-proff" class="CV-main-header-profession">Programmer</p>
                     </div>
                     <div class="CV-main-items" >
                         <div class="CV-main-experience">
