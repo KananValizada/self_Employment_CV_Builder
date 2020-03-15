@@ -180,6 +180,7 @@ interestNew.addEventListener("click", function(){
 })
 var  CvExperience = document.querySelector(".CV-edit-experience")
 intOtherBtn[1].addEventListener("click",function(){
+    intOtherBtn[0].style.display ="none"
     CvIntersts.style.display="none";
 intOtherBtn[1].style.display="none";
 CvExperience.style.display = "block"
@@ -190,3 +191,49 @@ var editExpName =document.getElementById("edit-exp-name")
 var editExpDesc =document.getElementById("edit-exp-desc")
 var editExpStartDate=document.getElementById("edit-exp-startDate")
 var editExpEndDate =document.getElementById("edit-exp-endDate")
+var editExpAddBtn =document.querySelector(".CV-edit-experience button")
+var dispExp =document.querySelector(".CV-main-experience")
+var dispExpTitle = document.querySelector(".title-experience")
+{/* <div class="CV-main-experience-item">
+                                <p class="CV-main-experience-item-date">
+                                    <span class="CV-main-experience-start">2012</span> - <span class="CV-main-experience-end">2016</span>
+                                </p>
+                                <div class="CV-main-experience-item-text">
+                                    <h4 class="CV-main-experience-title">Company A</h4>
+                                    <p class="CV-main-experience-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis accusamus quas dolore, ducimus animi veniam doloribus delectus adipisci quam blanditiis ea sit harum aliquam deleniti facere reiciendis quisquam ad nulla! 
+                                    </p>
+                                </div>
+                            </div> */}
+editExpAddBtn.addEventListener("click",function(){
+   var newWork=  document.createElement("div")
+   var newDate= document.createElement("p")
+   var newStartDate= document.createElement("span")
+   var newEndDate= document.createElement("span")
+   var newContent= document.createElement("div")
+   var newTitle= document.createElement("h4")
+   var newText= document.createElement("p")
+   newStartDate.innerText = editExpStartDate.value.split("-")[0]
+   newEndDate.innerText = editExpEndDate.value.split("-")[0]
+   newTitle.innerText = editExpName.value
+   newText.innerText = editExpDesc.value
+   newWork.classList.add("CV-main-experience-item")
+   newDate.classList.add("CV-main-experience-item-date")
+   newStartDate.classList.add("CV-main-experience-start")
+   newEndDate.classList.add("CV-main-experience-end")
+   newContent.classList.add("CV-main-experience-item-text")
+   newTitle.classList.add("CV-main-experience-title")
+   newText.classList.add("CV-main-experience-text")
+   newDate.appendChild(newStartDate)
+   newDate.innerHTML+=" - "
+   newDate.appendChild(newEndDate)
+   newContent.appendChild(newTitle)
+   newContent.appendChild(newText)
+   newWork.appendChild(newDate)
+   newWork.appendChild(newContent)
+   dispExp.appendChild(newWork)
+   dispExpTitle.style.display = "block"
+
+   alert("Ugurla əlavə olundu")
+
+
+})
