@@ -52,18 +52,31 @@ var interestEditSelect = document.getElementById("interest-select")
 var intersetSport =document.getElementById("sport")
 var intersetBook =document.getElementById("bookRead")
 var intersetEducate =document.getElementById("education")
-interestEditSelect.addEventListener("change",function(){
+var slct = ""
+interestEditSelect.addEventListener("click",function(){
 if(interestEditSelect.value=="Idmanla məşğul olmaq"){
     intersetSport.style.display="flex"
-    intersetBook.style.display = "none"
-    intersetEducate.style.display = "none"
+    if(!slct.includes("b") ||intCount==0 ){
+        intersetBook.style.display = "none"
+    }
+    if(!slct.includes("e") || intCount==0 ){
+        intersetEducate.style.display = "none"
+    }
 }else if(interestEditSelect.value=="Kitab oxumaq"){
 intersetBook.style.display = "flex"
-intersetSport.style.display="none"
-intersetEducate.style.display = "none"
+if(!slct.includes("s") ||intCount==0 ){
+    intersetSport.style.display = "none"
+}
+if(!slct.includes("e")||intCount==0 ){
+    intersetEducate.style.display = "none"
+}
 }else if(interestEditSelect.value=="Təhsil"){
+    if(!slct.includes("b")||intCount==0 ){
     intersetBook.style.display = "none"
+    }
+    if(!slct.includes("s") || intCount==0 ){
     intersetSport.style.display="none"
+    }
     intersetEducate.style.display = "flex"
 }else{
     intersetBook.style.display = "none"
@@ -76,13 +89,13 @@ var intDispTitleBook = document.querySelector("#bookRead .CV-interests-title")
 var intDispTitleEducate = document.querySelector("#education .CV-interests-title")
 var intDispTitleSport = document.querySelector("#sport .CV-interests-title")
 intTitle.addEventListener("input",function(){
-if(intersetSport.style.display=="flex"){
+if(interestEditSelect.value=="Idmanla məşğul olmaq"){
     intDispTitleSport.innerText= intTitle.value 
 }
-if(intersetBook.style.display=="flex"){
+if(interestEditSelect.value=="Kitab oxumaq"){
     intDispTitleBook.innerText= intTitle.value 
 }
-if(intersetEducate.style.display=="flex"){
+if(interestEditSelect.value=="Təhsil"){
     intDispTitleEducate.innerText= intTitle.value 
 }
 })
@@ -93,14 +106,54 @@ var intDispDescEducate = document.querySelector("#education .CV-interests-text")
 var intDispDescSport = document.querySelector("#sport .CV-interests-text")
 
 intEditDesc.addEventListener("input",function(){
-    if(intersetSport.style.display=="flex"){
+    if(interestEditSelect.value=="Idmanla məşğul olmaq"){
         intDispDescSport.innerText= intEditDesc.value 
     }
-    if(intersetBook.style.display=="flex"){
+    if(interestEditSelect.value=="Kitab oxumaq"){
         intDispDescBook.innerText= intEditDesc.value 
     }
-    if(intersetEducate.style.display=="flex"){
+    if(interestEditSelect.value=="Təhsil"){
         intDispDescEducate.innerText= intEditDesc.value 
     }
 })
 
+var intAddBtn =document.querySelector(".interest-btn-add")
+var intOtherBtn = document.querySelectorAll(".CV-edit-sections > button")
+var intEdit = document.querySelector(".CV-edit-interests")
+intAddBtn.addEventListener("click",function(){
+    intEdit.style.display = "none"
+    intOtherBtn.forEach(x=>x.style.display= "block")
+    if(interestEditSelect.value=="Kitab oxumaq"){
+        slct +="b"
+    }
+    if(interestEditSelect.value=="Idmanla məşğul olmaq"){
+        slct +="s"
+    }
+    if(interestEditSelect.value=="Təhsil"){
+        slct +="e"
+    }
+})
+
+var interestNew = document.querySelector(".interest-btn-new")
+var options = document.querySelectorAll(".interest-select option")
+var intCount = 0
+interestNew.addEventListener("click", function(){
+    intCount ++
+    if(intCount==2){
+        interestNew.disabled = true
+    }
+    if(slct.includes("b")){
+        options[1].disabled =true
+        options[1].selected=false
+    }
+    if(slct.includes("e")){
+        options[3].disabled =true
+        options[3].selected=false
+    }
+    if(slct.includes("s")){
+        options[2].disabled =true
+        options[2].selected=false
+    }
+    intEdit.style.display = "flex"
+    intOtherBtn.forEach(x=>x.style.display= "none")
+})
