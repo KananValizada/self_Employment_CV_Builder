@@ -95,3 +95,9 @@ margin-bottom: 15px;
 margin-bottom: 20px;
 height: 50px;
 }
+.CV-edit-education,.addSkillForm,.languageSkillForm{
+    display : none
+}
+.dispEduTitle{
+    display: none;
+}

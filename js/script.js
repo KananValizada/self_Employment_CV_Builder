@@ -234,6 +234,111 @@ editExpAddBtn.addEventListener("click",function(){
    dispExpTitle.style.display = "block"
 
    alert("Ugurla əlavə olundu")
+})
+var expContBTN = document.querySelector(".expContBtn")
+var CVeditEducation = document.querySelector(".CV-edit-education")
+expContBTN.addEventListener("click",function(){
+CVeditEducation.style.display = "block";
+CvExperience.style.display = "none"
+})
 
+
+//*********************** */ EDUCATİON*****************
+
+// {/* <div class="CV-main-education-item">
+//                                 <p class="CV-main-education-item-date">
+//                                     <span class="CV-main-education-start">2012</span> - <span class="CV-main-experience-end">2016</span>
+//                                 </p>
+//                                 <div class="CV-main-education-item-text">
+//                                     <h4 class="CV-main-education-title">Stratagic branding</h4>
+//                                     <p class="CV-main-education-text">University of Baku</p>
+//                                     <p class="CV-main-education-text">learning strategy</p>
+//                                 </div>
+//                             </div> */}
+
+var dispEdu = document.querySelector(".CV-main-education")
+var editEduAddBtn = document.querySelector(".editEduAddBtn")
+var dispEduTitle = document.querySelector(".dispEduTitle")
+var editEduStartDate = document.querySelector("#edit-edu-startDate")
+var editEduEndDate = document.querySelector("#edit-edu-endDate")
+var editEduName = document.querySelector("#edit-edu-name")
+var editEduDesc = document.querySelector("#edit-edu-desc")
+   editEduAddBtn.addEventListener("click",function(){
+   var newWork=  document.createElement("div")
+   var newDate= document.createElement("p")
+   var newStartDate= document.createElement("span")
+   var newEndDate= document.createElement("span")
+   var newContent= document.createElement("div")
+   var newTitle= document.createElement("h4")
+   var newText= document.createElement("p")
+   newStartDate.innerText = editEduStartDate.value.split("-")[0]
+   newEndDate.innerText = editEduEndDate.value.split("-")[0]
+   newTitle.innerText = editEduName.value
+   newText.innerText = editEduDesc.value
+   newWork.classList.add("CV-main-education-item")
+   newDate.classList.add("CV-main-education-item-date")
+   newStartDate.classList.add("CV-main-education-start")
+   newEndDate.classList.add("CV-main-experience-end")
+   newContent.classList.add("CV-main-education-item-text")
+   newTitle.classList.add("CV-main-education-title")
+   newText.classList.add("CV-main-education-text")
+   newDate.appendChild(newStartDate)
+   newDate.innerHTML+=" - "
+   newDate.appendChild(newEndDate)
+   newContent.appendChild(newTitle)
+   newContent.appendChild(newText)
+   newWork.appendChild(newDate)
+   newWork.appendChild(newContent)
+   dispEdu.appendChild(newWork)
+   dispEduTitle.style.display = "block"
+
+   alert("Ugurla əlavə olundu")
+})
+
+var eduNextBtn = document.querySelector(".eduNextBtn")
+var editSkillsForm = document.querySelector(".addSkillForm")
+
+eduNextBtn.addEventListener("click",function(){
+editSkillsForm.style.display =  "flex"
+CVeditEducation.style.display = "none"
+})
+
+// SKILL SCT***********
+var addSkillBtn = document.querySelector(".addSkillBtn")
+var languageSkillForm = document.querySelector(".languageSkillForm")
+addSkillBtn.addEventListener("click",function(){
+    editSkillsForm.style.display = "none"
+    languageSkillForm.style.display = "block"
+
+})
+
+
+// {/* <div class="CV-main-skills-languages">
+//                             <h3 class="CV-main-skills-languages-title">Languages</h3>
+//                             <div>
+//                                 <span  class="CV-main-skills-language">English</span>
+//                             <div class="skill-percentage">
+//                                 <h1></h1>
+//                             </div>
+//                             </div>
+                            
+//                         </div> */}
+
+var titleDispSkils = document.querySelector(".CV-main-skills")
+var skillSelectedLang = document.querySelector(".skillSelectedLang")
+var skillLangRange = document.querySelector(".skillLangRange")
+var addLangSkillBtn = document.querySelector(".addLangSkillBtn")
+addLangSkillBtn.addEventListener("click",function(){
+    var newLangCont = document.createElement("div")
+    var newLang = document.createElement("span")
+    var newLangRange = document.createElement("div")
+    var newLangRangeBack = document.createElement("h1")
+    newLang.classList.add("CV-main-skills-language")
+    newLang.innerText = skillSelectedLang.value
+    newLangRange.classList.add("skill-percentage")
+    newLangRangeBack.style.width = skillLangRange.value + "%"
+    newLangRange.append(newLangRangeBack)
+    newLangCont.append(newLang,newLangRange)
+    titleDispSkils.append(newLangCont)
 
 })
