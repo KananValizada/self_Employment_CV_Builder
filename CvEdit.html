@@ -26,6 +26,14 @@
         <div class="Cv-editor">
             <div class="container Cv-editor-keeper">
                 <div class="CV-edit-sections">
+                    <ul class="cvEditNav">
+                        <li><button id="navPerson" type="button" disabled>Şəxsi məlumatlar</button></li>
+                        <li><button id="navInterest" type="button" disabled>Maraqlar</button></li>
+                        <li><button id="navExp" type="button" disabled>Təcrübə</button></li>
+                        <li><button id="navEducate" type="button" disabled>Təhsil</button></li>
+                        <li><button id="navSkills" type="button" disabled>Bacarıqlar</button></li>
+                        <li><button id="navDesign" type="button" disabled>Dizayn ver</button></li>
+                    </ul>
                     <div id="CV-edit-personal" class="CV-edit-personal">
                         <h3 class="CV-edit-title">Şəxsi məlumatlar</h3>
                          <label for="pict">Səkil Yüklə</label>
@@ -72,8 +80,8 @@
                             <input id="edit-exp-startDate" type="date" name="startDate" />
                             <label for="endDate">Bitmə tarixi</label>
                             <input id="edit-exp-endDate"  type="date" name="endDate"/>
-                            <button type="button">Əlavə et</button>
-                            <button type="button" class="expContBtn">Davam et</button>
+                            <button type="button" class="mainBtn">Əlavə et</button>
+                            <button type="button" class="expContBtn mainBtn">Davam et</button>
                         </form>
                      </div>
                      <div class="CV-edit-education">
@@ -85,14 +93,14 @@
                             <input id="edit-edu-startDate" type="date" name="startDate" />
                             <label for="endDate">Bitmə tarixi</label>
                             <input id="edit-edu-endDate"  type="date" name="endDate"/>
-                            <button type="button" class="editEduAddBtn">Əlavə et</button>
-                            <button type="button" class="eduNextBtn">Dəvam et</button>
+                            <button type="button" class="editEduAddBtn mainBtn">Əlavə et</button>
+                            <button type="button" class="eduNextBtn mainBtn ">Dəvam et</button>
                         </form>
                      </div>
                      <div class="CV-edit-skills">
                         <form class="personal-info addSkillForm" action="">
                             <h3 class="CV-edit-title">Bacarıqlar</h3>
-                            <button type="button" class="addSkillBtn">Əlavə et</button>
+                            <button type="button" class="addSkillBtn mainBtn ">Əlavə et</button>
                         </form>
                         <form class="languageSkillForm">
                             <h3 class="CV-edit-title">Dil bilikləri</h3>
@@ -104,8 +112,35 @@
                             </select>
                             <p class="rangeText">Bilik səviyyəsi</p>
                             <input type="range" min="1" max="100" class="skillLangRange">
-                            <button type="button" class="addLangSkillBtn">Əlavə et</button>
+                            <button type="button" class="addLangSkillBtn mainBtn">Əlavə et</button>
+                            <button type="button" class="goDesignBtn mainBtn">Dizayna Keç</button>
                         </form>
+                     </div>
+                     <div class="CV-edit-design">
+                        <h3 class="CV-edit-title ">Dizayn Ver</h3>
+                         <div class="imgDesign">
+                            <label for="shape">Şəklin forması (Dörd künc? )</label> 
+                            <input id="isImgSquare" name="shape" type="checkbox">
+                            <label for="borderColor">Şəklin çərçivəsinin rəngi </label>
+                            <input id="imgBorderColor" type="color" name="borderColor">
+                         </div>
+                         <div class="fontDesign">
+                             <label for="mainFontColor">Əsas font rəngi</label>
+                             <input id="mainFontColor" name="mainFontColor" type="color">
+                             <label for="mainFontSize">Əsas font ölçüsü</label>
+                             <input id="mainFontSize" name="mainFontSize" max="40" min="10" type="range">
+                             <label for="secondFontColor">Ikinci font rəngi</label>
+                             <input name="secondFontColor" type="color">
+                             <label for="secondFontSize">Ikinci font ölçüsü</label>
+                             <input name="secondFontSize" type="range">
+                         </div>
+                         <div class="backDesign">
+                             <label for="sideBack">Köməkçi arxa fon rəngi</label>
+                             <input type="color" name="sideBack">
+                             <label for="mainBack">Əsas arxa fon rəngi</label>
+                             <input type="color" name="mainBack">
+                         </div>
+
                      </div>
                 </div>
              <div id="aba" class="CV">

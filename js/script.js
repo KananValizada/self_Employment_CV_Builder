@@ -1,4 +1,71 @@
 
+// MANAGING CV NAVS*******************************
+
+var navPerson = document.getElementById("navPerson")
+var navInterest = document.getElementById("navInterest")
+var navEducate = document.getElementById("navEducate")
+var navSkills = document.getElementById("navSkills")
+var navExp = document.getElementById("navExp")
+var navDesign = document.getElementById("navDesign")
+
+navPerson.addEventListener("click",function(){
+    CvPersonal.style.display = "block"
+    CvIntersts.style.display = "none"
+    intOtherBtn[1].style.display="none"
+    CvExperience.style.display = "none"
+    CVeditEducation.style.display = "none"
+    cvEditSkills.style.display =  "none"
+    cvEditDesign.style.display = "none"
+})
+navInterest.addEventListener("click",function(){
+    CvPersonal.style.display = "none"
+    CvIntersts.style.display = "block"
+    intOtherBtn[1].style.display="block"
+    CvExperience.style.display = "none"
+    CVeditEducation.style.display = "none"
+    cvEditSkills.style.display =  "none"
+    cvEditDesign.style.display = "none"
+})
+navExp.addEventListener("click",function(){
+    CvPersonal.style.display = "none"
+    CvIntersts.style.display = "none"
+    intOtherBtn[1].style.display="none"
+    CvExperience.style.display = "block"
+    CVeditEducation.style.display = "none"
+    cvEditSkills.style.display =  "none"
+    cvEditDesign.style.display = "none"
+})
+navEducate.addEventListener("click",function(){
+    CvPersonal.style.display = "none"
+    CvIntersts.style.display = "none"
+    intOtherBtn[1].style.display="none"
+    CvExperience.style.display = "none"
+    CVeditEducation.style.display = "block"
+    cvEditSkills.style.display =  "none"
+    cvEditDesign.style.display = "none"
+})
+navSkills.addEventListener("click",function(){
+    CvPersonal.style.display = "none"
+    CvIntersts.style.display = "none"
+    intOtherBtn[1].style.display="none"
+    CvExperience.style.display = "none"
+    CVeditEducation.style.display = "none"
+    cvEditSkills.style.display =  "block"
+    cvEditDesign.style.display = "none"
+})
+navDesign.addEventListener("click",function(){
+    CvPersonal.style.display = "none"
+    CvIntersts.style.display = "none"
+    intOtherBtn[1].style.display="none"
+    CvExperience.style.display = "none"
+    CVeditEducation.style.display = "none"
+    cvEditSkills.style.display =  "none"
+    cvEditDesign.style.display = "block"
+})
+// MANAGING PERSONEDIT CV********************
+
+
+
 var nametxt = document.getElementById("CV-main-header-name")
 var names = document.getElementById("edit-name")
 var city = document.getElementById("edit-city")
@@ -44,6 +111,8 @@ editProfess.addEventListener("input",function(){
     dispProff.innerText=editProfess.value
 })
 
+
+
 var CvPersonal =document.getElementById("CV-edit-personal")
 var CvIntersts =document.getElementById("CV-edit-interests")
 CvIntersts.style.display="none";
@@ -53,12 +122,15 @@ editPersonBtn.addEventListener("click",function(){
         alert("Məlumatları doldurmalısınız")
         return;
     }
+    navPerson.classList.add("navDone")
+    navPerson.disabled = false
 CvPersonal.style.display="none";
 CvIntersts.style.display="flex";
 intOtherBtn[1].style.display="block"
 })
 
-// interest adding
+// interest adding***********************************
+
 var interestEditSelect = document.getElementById("interest-select")
 var intersetSport =document.getElementById("sport")
 var intersetBook =document.getElementById("bookRead")
@@ -184,6 +256,8 @@ intOtherBtn[1].addEventListener("click",function(){
     CvIntersts.style.display="none";
 intOtherBtn[1].style.display="none";
 CvExperience.style.display = "block"
+navInterest.disabled = false;
+navInterest.classList.add("navDone")
 })
 
 
@@ -239,6 +313,8 @@ var expContBTN = document.querySelector(".expContBtn")
 var CVeditEducation = document.querySelector(".CV-edit-education")
 expContBTN.addEventListener("click",function(){
 CVeditEducation.style.display = "block";
+navExp.classList.add("navDone")
+navExp.disabled =false
 CvExperience.style.display = "none"
 })
 
@@ -300,6 +376,8 @@ var editSkillsForm = document.querySelector(".addSkillForm")
 
 eduNextBtn.addEventListener("click",function(){
 editSkillsForm.style.display =  "flex"
+navEducate.classList.add("navDone")
+navEducate.disabled = false
 CVeditEducation.style.display = "none"
 })
 
@@ -307,6 +385,7 @@ CVeditEducation.style.display = "none"
 var addSkillBtn = document.querySelector(".addSkillBtn")
 var languageSkillForm = document.querySelector(".languageSkillForm")
 addSkillBtn.addEventListener("click",function(){
+    cvEditSkills.style.display = "block"
     editSkillsForm.style.display = "none"
     languageSkillForm.style.display = "block"
 
@@ -328,7 +407,11 @@ var titleDispSkils = document.querySelector(".CV-main-skills")
 var skillSelectedLang = document.querySelector(".skillSelectedLang")
 var skillLangRange = document.querySelector(".skillLangRange")
 var addLangSkillBtn = document.querySelector(".addLangSkillBtn")
+var titleSkills = document.querySelector(".title-skills")
+var langSkillTitle = document.querySelector(".CV-main-skills-languages-title")
 addLangSkillBtn.addEventListener("click",function(){
+titleSkills.style.display = "block"
+langSkillTitle.style.display = "block"
     var newLangCont = document.createElement("div")
     var newLang = document.createElement("span")
     var newLangRange = document.createElement("div")
@@ -341,4 +424,54 @@ addLangSkillBtn.addEventListener("click",function(){
     newLangCont.append(newLang,newLangRange)
     titleDispSkils.append(newLangCont)
 
+})
+var goDesignBtn = document.querySelector(".goDesignBtn")
+var cvEditDesign  = document.querySelector(".CV-edit-design")
+var cvEditSkills = document.querySelector(".CV-edit-skills")
+goDesignBtn.addEventListener("click",function(){
+    navSkills.disabled = false;
+    navSkills.classList.add("navDone")
+    navDesign.disabled = false;
+    navDesign.classList.add("navDone")
+    cvEditSkills.style.display =  "none"
+    cvEditDesign.style.display = "block"
+})
+
+// MANAGING DESIGN ***************************
+
+var dispImg =document.querySelector(".CV-side-imgKeeper")
+var isImgSquare = document.getElementById("isImgSquare")
+var imgBorderColor = document.getElementById("imgBorderColor")
+isImgSquare.addEventListener("change",function(){
+    if(isImgSquare.checked){
+        dispImg.style.borderRadius = "0"
+    }else{
+        dispImg.style.borderRadius="50%"
+    }
+})
+imgBorderColor.addEventListener("change",function(){
+    console.log(imgBorderColor.value)
+    dispImg.style.borderColor = imgBorderColor.value
+})
+
+var CvFontMain = document.querySelectorAll(".CV-title")
+var mainFontColor = document.getElementById("mainFontColor")
+var mainFontSize = document.getElementById("mainFontSize")
+var skillPersentage1 = document.querySelector(".skill-percentage h1")
+var skillPersentage2 = document.querySelectorAll(".skill-percentage h1")
+var mainIcons = document.querySelectorAll(".CV-interests i")
+mainFontColor.addEventListener("change",function(){
+    CvFontMain.forEach(x=>{
+        x.style.color = mainFontColor.value
+        x.style.borderBottom = "1px solid" + mainFontColor.value
+    }
+    )
+    console.log(skillPersentage1)
+    skillPersentage1.style.backgroundColor =mainFontColor.value
+    // skillPersentage2.forEach(x=>x.style.backgroundColor = mainFontColor.value)
+    mainIcons.forEach(x=>x.style.color = mainFontColor.value)
+})
+mainFontSize.addEventListener("input",function(){
+    console.log(mainFontSize.value)
+    CvFontMain.forEach(x=>x.style.fontSize= mainFontSize.value+"px")
 })

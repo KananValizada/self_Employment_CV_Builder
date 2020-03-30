@@ -4,10 +4,15 @@
 .CV{
     display: flex;
     width: 60%;
+    height: 800px;
 }
 .CV-side{
     min-width: 190px;
-    padding: 5% 6%;
+    max-width: 190px;
+    padding: 5% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #e0948ed1;
 }
 .CV-side-imgKeeper{
@@ -45,12 +50,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 8%;
+    margin-bottom: 2%;
+}
+
+.CV-contacts-items{
+    margin-bottom: 20px;
 }
 .CV-contacts-item span{
     display: block;
     width: 80%;
-    font-size: 100%;
+    font-size: 75%;
     word-break: break-all;
 }
 .CV-interests-item ul {
@@ -59,9 +68,14 @@
 #sport,#bookRead,#education{
     display: none;
 }
-.fas,.fab{
-    font-size: 110%;
-    color: #ffca6a;
+
+.CV-interests i{
+    font-size: 96%;
+    color:#ffca6a
+}
+ .CV-contacts .fas,.CV-contacts .fab{
+    font-size: 96%;
+    color: black;
 }
 ul {
     list-style: none;
@@ -87,7 +101,7 @@ ul {
 }
 .CV-main-header{
     text-align: center;
-    padding: 8% 0;
+    padding: 20% 0 0 0;
 }
 .CV-main-header-name{
     font-size: 215%;
@@ -116,7 +130,7 @@ ul {
 .CV-main-experience-text,
 .CV-main-education-text,
 .CV-main-skills-language{
-    font-size: 70%;
+    font-size: 80%;
     margin-top: 3%;
 }
 
@@ -131,7 +145,8 @@ ul {
     margin-right: 10%;
 }
 .skill-percentage{
-    height: 2vw;
+    margin: 5px 0 ;
+    height: 1vw;
     width: 50%;
     border: 1px solid #ffca6a;
     position: relative;
@@ -142,8 +157,8 @@ top: 0;
 left: 0;
 bottom: 0;
 width: 20%;
-background-color:#ffca6a ;
+background-color:black ;
 }
-.title-interest, .title-experience,.title-skills{
+.title-interest, .title-experience,.title-skills,.CV-main-skills-languages-title{
     display: none;
 }

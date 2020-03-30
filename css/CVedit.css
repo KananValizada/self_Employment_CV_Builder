@@ -95,9 +95,34 @@ margin-bottom: 15px;
 margin-bottom: 20px;
 height: 50px;
 }
-.CV-edit-education,.addSkillForm,.languageSkillForm{
+.CV-edit-education,.addSkillForm,.languageSkillForm,.CV-edit-design{
     display : none
 }
 .dispEduTitle{
     display: none;
+}
+.cvEditNav li{
+float: left;
+outline: none;
+
+
+}
+.mainBtn{
+    padding: 15px;
+    background-color: teal;
+    outline: none;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.navDone {
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    transition: 1s;
+}
+.imgDesign,.fontDesign,.backDesign{
+    display: flex;
+    flex-direction: column;
+
 }
