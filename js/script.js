@@ -10,26 +10,14 @@ var navDesign = document.getElementById("navDesign")
 
 navPerson.addEventListener("click",function(){
     CvPersonal.style.display = "block"
-    CvIntersts.style.display = "none"
-    intOtherBtn[1].style.display="none"
     CvExperience.style.display = "none"
     CVeditEducation.style.display = "none"
     cvEditSkills.style.display =  "none"
     cvEditDesign.style.display = "none"
 })
-navInterest.addEventListener("click",function(){
-    CvPersonal.style.display = "none"
-    CvIntersts.style.display = "block"
-    intOtherBtn[1].style.display="block"
-    CvExperience.style.display = "none"
-    CVeditEducation.style.display = "none"
-    cvEditSkills.style.display =  "none"
-    cvEditDesign.style.display = "none"
-})
+
 navExp.addEventListener("click",function(){
     CvPersonal.style.display = "none"
-    CvIntersts.style.display = "none"
-    intOtherBtn[1].style.display="none"
     CvExperience.style.display = "block"
     CVeditEducation.style.display = "none"
     cvEditSkills.style.display =  "none"
@@ -37,8 +25,6 @@ navExp.addEventListener("click",function(){
 })
 navEducate.addEventListener("click",function(){
     CvPersonal.style.display = "none"
-    CvIntersts.style.display = "none"
-    intOtherBtn[1].style.display="none"
     CvExperience.style.display = "none"
     CVeditEducation.style.display = "block"
     cvEditSkills.style.display =  "none"
@@ -46,8 +32,6 @@ navEducate.addEventListener("click",function(){
 })
 navSkills.addEventListener("click",function(){
     CvPersonal.style.display = "none"
-    CvIntersts.style.display = "none"
-    intOtherBtn[1].style.display="none"
     CvExperience.style.display = "none"
     CVeditEducation.style.display = "none"
     cvEditSkills.style.display =  "block"
@@ -55,8 +39,6 @@ navSkills.addEventListener("click",function(){
 })
 navDesign.addEventListener("click",function(){
     CvPersonal.style.display = "none"
-    CvIntersts.style.display = "none"
-    intOtherBtn[1].style.display="none"
     CvExperience.style.display = "none"
     CVeditEducation.style.display = "none"
     cvEditSkills.style.display =  "none"
@@ -114,151 +96,20 @@ editProfess.addEventListener("input",function(){
 
 
 var CvPersonal =document.getElementById("CV-edit-personal")
-var CvIntersts =document.getElementById("CV-edit-interests")
-CvIntersts.style.display="none";
 var intOtherBtn = document.querySelectorAll(".CV-edit-sections > button")
 editPersonBtn.addEventListener("click",function(){
     if( editProfess=="" ||names.value==""||city.value==""||phone.value==""||mobile.value==""|| mail.value==""){
         alert("Məlumatları doldurmalısınız")
         return;
     }
-    navPerson.classList.add("navDone")
-    navPerson.disabled = false
+    navExp.classList.add("navDone")
+    navExp.disabled = false
 CvPersonal.style.display="none";
-CvIntersts.style.display="flex";
-intOtherBtn[1].style.display="block"
+CvExperience.style.display="block";
 })
 
-// interest adding***********************************
 
-var interestEditSelect = document.getElementById("interest-select")
-var intersetSport =document.getElementById("sport")
-var intersetBook =document.getElementById("bookRead")
-var intersetEducate =document.getElementById("education")
-var slct = ""
-var act=0
-interestEditSelect.addEventListener("click",function(){
-act++
-if(interestEditSelect.value=="Idmanla məşğul olmaq"){
-    intersetSport.style.display="flex"
-    if(!slct.includes("b") ||intCount==0 ){
-        intersetBook.style.display = "none"
-    }
-    if(!slct.includes("e") || intCount==0 ){
-        intersetEducate.style.display = "none"
-    }
-}else if(interestEditSelect.value=="Kitab oxumaq"){
-intersetBook.style.display = "flex"
-if(!slct.includes("s") ||intCount==0 ){
-    intersetSport.style.display = "none"
-}
-if(!slct.includes("e")||intCount==0 ){
-    intersetEducate.style.display = "none"
-}
-}else if(interestEditSelect.value=="Təhsil"){
-    if(!slct.includes("b")||intCount==0 ){
-    intersetBook.style.display = "none"
-    }
-    if(!slct.includes("s") || intCount==0 ){
-    intersetSport.style.display="none"
-    }
-    intersetEducate.style.display = "flex"
-}else{
-    intersetBook.style.display = "none"
-    intersetSport.style.display="none"
-    intersetEducate.style.display = "none"
-}
-})
-var intTitle = document.querySelector(".interest-title input")
-var intDispTitleBook = document.querySelector("#bookRead .CV-interests-title")
-var intDispTitleEducate = document.querySelector("#education .CV-interests-title")
-var intDispTitleSport = document.querySelector("#sport .CV-interests-title")
-intTitle.addEventListener("input",function(){
-if(interestEditSelect.value=="Idmanla məşğul olmaq"){
-    intDispTitleSport.innerText= intTitle.value 
-}
-if(interestEditSelect.value=="Kitab oxumaq"){
-    intDispTitleBook.innerText= intTitle.value 
-}
-if(interestEditSelect.value=="Təhsil"){
-    intDispTitleEducate.innerText= intTitle.value 
-}
-})
-
-var intEditDesc = document.getElementById("interest-desc")
-var intDispDescBook = document.querySelector("#bookRead .CV-interests-text")
-var intDispDescEducate = document.querySelector("#education .CV-interests-text")
-var intDispDescSport = document.querySelector("#sport .CV-interests-text")
-
-intEditDesc.addEventListener("input",function(){
-    if(interestEditSelect.value=="Idmanla məşğul olmaq"){
-        intDispDescSport.innerText= intEditDesc.value 
-    }
-    if(interestEditSelect.value=="Kitab oxumaq"){
-        intDispDescBook.innerText= intEditDesc.value 
-    }
-    if(interestEditSelect.value=="Təhsil"){
-        intDispDescEducate.innerText= intEditDesc.value 
-    }
-})
-
-var intAddBtn =document.querySelector(".interest-btn-add")
-var intEdit = document.querySelector(".CV-edit-interests")
-intAddBtn.addEventListener("click",function(){
-    if( act==0||interestEditSelect.value=="Secin"){
-        interestEditSelect.style.border="1px solid red"
-        return
-    }
-    // if()
-    interestEditSelect.style.border="1px solid black"
-    document.querySelector(".title-interest").style.display = "block"
-    intEdit.style.display = "none"
-    intOtherBtn[0].style.display="block"
-    if(interestEditSelect.value=="Kitab oxumaq"){
-        slct +="b"
-    }
-    if(interestEditSelect.value=="Idmanla məşğul olmaq"){
-        slct +="s"
-    }
-    if(interestEditSelect.value=="Təhsil"){
-        slct +="e"
-    }
-})
-
-var interestNew = document.querySelector(".interest-btn-new")
-var options = document.querySelectorAll(".interest-select option")
-var intCount = 0
-interestNew.addEventListener("click", function(){
-    
-    intCount ++
-    if(intCount==2){
-        interestNew.disabled = true
-    }
-    if(slct.includes("b")){
-        options[1].disabled =true
-        options[1].selected=false
-    }
-    if(slct.includes("e")){
-        options[3].disabled =true
-        options[3].selected=false
-    }
-    if(slct.includes("s")){
-        options[2].disabled =true
-        options[2].selected=false
-    }
-    act=0
-    intEdit.style.display = "flex"
-    intOtherBtn[0].style.display= "none"
-})
 var  CvExperience = document.querySelector(".CV-edit-experience")
-intOtherBtn[1].addEventListener("click",function(){
-    intOtherBtn[0].style.display ="none"
-    CvIntersts.style.display="none";
-intOtherBtn[1].style.display="none";
-CvExperience.style.display = "block"
-navInterest.disabled = false;
-navInterest.classList.add("navDone")
-})
 
 
 var editExpName =document.getElementById("edit-exp-name")
@@ -279,6 +130,19 @@ var dispExpTitle = document.querySelector(".title-experience")
                                 </div>
                             </div> */}
 editExpAddBtn.addEventListener("click",function(){
+if(editExpName.value==""){
+    alert("Is yeri daxil etmemisiniz")
+    return
+}else if(editExpDesc.value==""){
+    alert("is malumati daxil etmemisiniz!!")
+    return
+}else if(editExpStartDate.value==""){
+    alert("Baslangic tarixi daxil etmemisiniz!!")
+    return
+}else if(editExpEndDate.value==""){
+    alert("Bitma tarixi daxil etmemisiniz!!")
+}
+
    var newWork=  document.createElement("div")
    var newDate= document.createElement("p")
    var newStartDate= document.createElement("span")
@@ -308,13 +172,17 @@ editExpAddBtn.addEventListener("click",function(){
    dispExpTitle.style.display = "block"
 
    alert("Ugurla əlavə olundu")
+   editExpName.value=""
+   editExpEndDate.value=""
+   editExpStartDate.value=""
+   editExpDesc.value=""
 })
 var expContBTN = document.querySelector(".expContBtn")
 var CVeditEducation = document.querySelector(".CV-edit-education")
 expContBTN.addEventListener("click",function(){
 CVeditEducation.style.display = "block";
-navExp.classList.add("navDone")
-navExp.disabled =false
+navEducate.classList.add("navDone")
+navEducate.disabled =false
 CvExperience.style.display = "none"
 })
 
@@ -340,6 +208,18 @@ var editEduEndDate = document.querySelector("#edit-edu-endDate")
 var editEduName = document.querySelector("#edit-edu-name")
 var editEduDesc = document.querySelector("#edit-edu-desc")
    editEduAddBtn.addEventListener("click",function(){
+    if(editEduName.value==""){
+        alert("Ixtisasinizi daxil etmemisiniz")
+        return
+    }else if(editEduDesc.value==""){
+        alert("Tehsil malumatinizi daxil etmemisiniz!!")
+        return
+    }else if(editEduStartDate.value==""){
+        alert("Baslangic tarixi daxil etmemisiniz!!")
+        return
+    }else if(editEduEndDate.value==""){
+        alert("Bitma tarixi daxil etmemisiniz!!")
+    }
    var newWork=  document.createElement("div")
    var newDate= document.createElement("p")
    var newStartDate= document.createElement("span")
@@ -369,6 +249,10 @@ var editEduDesc = document.querySelector("#edit-edu-desc")
    dispEduTitle.style.display = "block"
 
    alert("Ugurla əlavə olundu")
+   editEduDesc.value = ""
+   editEduEndDate.value=""
+   editEduName.value=""
+   editEduName.value=""
 })
 
 var eduNextBtn = document.querySelector(".eduNextBtn")
@@ -376,8 +260,8 @@ var editSkillsForm = document.querySelector(".addSkillForm")
 
 eduNextBtn.addEventListener("click",function(){
 editSkillsForm.style.display =  "flex"
-navEducate.classList.add("navDone")
-navEducate.disabled = false
+navSkills.classList.add("navDone")
+navSkills.disabled = false
 CVeditEducation.style.display = "none"
 })
 
@@ -474,4 +358,38 @@ mainFontColor.addEventListener("change",function(){
 mainFontSize.addEventListener("input",function(){
     console.log(mainFontSize.value)
     CvFontMain.forEach(x=>x.style.fontSize= mainFontSize.value+"px")
+})
+
+
+var mainBackColor = document.querySelector(".CV-main")
+var sideBackColor = document.querySelector(".CV-side")
+var editSideBack = document.getElementById("sideBack")
+var editMainBack = document.getElementById("mainBack")
+editSideBack.addEventListener("change",function(){
+    sideBackColor.style.backgroundColor = editSideBack.value
+})
+editMainBack.addEventListener("change",function(){
+    mainBackColor.style.backgroundColor = editMainBack.value
+})
+
+
+// Printing*************************
+
+var goPrintBtn = document.getElementById("goPrintBtn")
+var header = document.querySelector(".navbar")
+var footer = document.querySelector(".footer")
+var edit = document.querySelector(".CV-edit-sections")
+var CV = document.querySelector(".CV")
+var printBtn = document.getElementById("printBtn")
+goPrintBtn.addEventListener("click",function(){
+    header.style.display = "none"
+    footer.style.display = "none"
+    edit.style.display = "none"
+    CV.style.margin = "0 auto"
+})
+
+
+printBtn.addEventListener("click",function(){
+    printBtn.style.display = "none"
+    window.print()
 })

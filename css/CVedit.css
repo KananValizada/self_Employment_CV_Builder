@@ -12,7 +12,9 @@
 }
 .personal-info input,.personal-info label{
     margin-bottom: 10px;
-    
+    border: none;
+    outline: none;
+    border-bottom: 1px solid teal;
     height: 25px;
 }
 .personal-info-btn{
@@ -37,6 +39,12 @@
 .CV-edit-sections{
     display: flex;
     flex-direction: column;
+}
+.cvEditNav button{
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-right: 5px;
 }
 .interest-select{
     padding-bottom: 20px;
@@ -125,4 +133,15 @@ outline: none;
     display: flex;
     flex-direction: column;
 
+}
+.personPictLabel{
+    background-color: teal;
+    display: inline-block;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    cursor: pointer;
+}
+.personPict{
+    display: none;
 }

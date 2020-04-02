@@ -3,8 +3,7 @@
 }
 .CV{
     display: flex;
-    width: 60%;
-    height: 800px;
+    min-height: 800px;
 }
 .CV-side{
     min-width: 190px;
@@ -93,7 +92,8 @@ ul {
 
 .CV-main{
 
-    padding: 0 5%;
+    width: 450px;
+    padding: 0 5% 20px;
     background-color: #f5f5f5;
 }
 .CV-main-items{
@@ -127,6 +127,10 @@ ul {
 .CV-main-skills-languages-title{
     font-size: 100%;
 }
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
 .CV-main-experience-text,
 .CV-main-education-text,
 .CV-main-skills-language{
@@ -148,8 +152,8 @@ ul {
     margin: 5px 0 ;
     height: 1vw;
     width: 50%;
-    border: 1px solid #ffca6a;
     position: relative;
+    border: 1px solid black;
 }
 .skill-percentage h1 {
 position: absolute;
