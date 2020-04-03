@@ -381,15 +381,31 @@ var footer = document.querySelector(".footer")
 var edit = document.querySelector(".CV-edit-sections")
 var CV = document.querySelector(".CV")
 var printBtn = document.getElementById("printBtn")
+var printReturn = document.getElementById("printReturn")
 goPrintBtn.addEventListener("click",function(){
     header.style.display = "none"
     footer.style.display = "none"
     edit.style.display = "none"
     CV.style.margin = "0 auto"
+    printBtn.style.display = "block"
+    printReturn.style.display = "block"
 })
 
 
 printBtn.addEventListener("click",function(){
     printBtn.style.display = "none"
-    window.print()
+    printReturn.style.display="none"
+     window.print()
 })
+printReturn.addEventListener("click",function(){
+    header.style.display = "flex"
+    footer.style.display = "block"
+    edit.style.display = "flex"
+    CV.style.margin = "0"
+    printBtn.style.display = "none"
+    printReturn.style.display = "none"
+})
+window.onafterprint = function(){
+    this.printBtn.style.display = "block"
+    this.printReturn.style.display="block"
+}

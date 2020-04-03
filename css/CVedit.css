@@ -142,6 +142,33 @@ outline: none;
     color: white;
     cursor: pointer;
 }
+.printBtns{
+    margin: 0 auto;
+    display: flex;
+    width: fit-content;
+}
+.goPrintBtn{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: teal;
+    outline: none;
+    color: white;
+}
+.printBtn{
+    display: none;
+    padding: 20px;
+    margin-right: 10px;
+    background-color: teal;
+    outline: none;
+    color: white;
+}
+.printReturn{
+    display: none;
+    padding: 20px;
+    background-color: teal;
+    outline: none;
+    color: white;
+}
 .personPict{
     display: none;
 }
